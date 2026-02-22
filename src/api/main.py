@@ -4,10 +4,9 @@ from typing import List, Dict, Any, Optional
 import numpy as np
 from src.models.inference import ModelRegistry, InferenceEngine
 from src.features.store import FeatureStore
-import logging
+from src.utils.logging import setup_logger
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = setup_logger(__name__)
 
 app = FastAPI(
     title="ML Prediction API",
