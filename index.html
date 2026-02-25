@@ -1,17 +1,2 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>distributed-ml-pipeline-py - Live Demo</title>
-</head>
-<body style="font-family:Segoe UI,Arial,sans-serif;background:#0b1020;color:#e6ecff;margin:0;padding:24px;">
-  <h1>distributed-ml-pipeline-py</h1>
-  <p>Industrialized frontend on Vercel.</p>
-  <p>Backend: <a href="/api/health" style="color:#93c5fd">/api/health</a></p>
-  <pre id="out">checking...</pre>
-  <script>
-    fetch('/api/health').then(r=>r.json()).then(d=>{document.getElementById('out').textContent=JSON.stringify(d,null,2)}).catch(()=>{document.getElementById('out').textContent='unreachable'})
-  </script>
-</body>
-</html>
+<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><title>distributed-ml-pipeline-py - Live Demo</title></head><body style='font-family:Segoe UI,Arial,sans-serif;background:#0b1020;color:#e6ecff;margin:0;padding:24px;'><h1>distributed-ml-pipeline-py</h1><p>Industrialized frontend on Vercel.</p><p>Backend: <a href='/api/health' style='color:#93c5fd'>/api/health</a></p><pre id='out'>checking...</pre><script>fetch('/api/health').then(r=>r.json()).then(d=>{document.getElementById('out').textContent=JSON.stringify(d,null,2)}).catch(()=>{document.getElementById('out').textContent='unreachable'})</script></body></html>
