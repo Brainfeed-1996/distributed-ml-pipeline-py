@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>distributed-ml-pipeline-py - Live Demo</title>
+  <style>
+    body { font-family: Inter, Segoe UI, Arial, sans-serif; margin: 0; background: #0b1020; color: #e6ecff; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    .card { background: #121a31; border: 1px solid #26345f; border-radius: 14px; padding: 24px; }
+    .ok { color: #6ee7b7; }
+    code { background: #1b2444; padding: 2px 6px; border-radius: 6px; }
+    a { color: #93c5fd; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>distributed-ml-pipeline-py</h1>
+      <p>Industrialized frontend deployed on Vercel with a backend health endpoint.</p>
+      <p>Backend check: <code>/api/health</code> → <span id="status">checking...</span></p>
+      <p><a href="/api/health" target="_blank" rel="noreferrer">Open raw health response</a></p>
+    </div>
+  </div>
+  <script>
+    fetch('/api/health')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('status').innerHTML = '<span class="ok">OK (' + (data.status || 'up') + ')</span>';
+      })
+      .catch(() => {
+        document.getElementById('status').textContent = 'unreachable';
+      });
+  </script>
+</body>
+</html>
